@@ -1,0 +1,18 @@
+If the behavior will not be reused, then make it a concrete class.
+
+If it might be reused in multiple, unrelated classes, make it a trait.
+
+If you want to inherit from it in Java code, use an abstract class.
+
+If you plan to distribute it in compiled form, 
+and you expect outside groups to write classes inheriting from it, 
+you might lean towards using an abstract class.
+
+If outside clients will only call into the behavior, instead of inheriting from it,
+then using a trait is fine.
+
+If efficiency is very important, lean towards using a class.
+
+If you still do not know, after considering the above, then start by making
+it as a trait. You can always change it later, and in general using a trait keeps
+more options open.
